@@ -1,12 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #614200;
+  --accent: #a37001;
 }
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Alata", sans-serif;
+  text-transform: capitalize;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.slideInBottom {
+  animation: slideInBottom 0.3s linear;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html body {
   color: var(--foreground);
   background: var(--background);
+}
+html body section {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(204, 204, 204) 0%, rgb(255, 255, 255) 100%);
 }
